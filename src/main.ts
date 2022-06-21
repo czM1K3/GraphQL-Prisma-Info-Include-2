@@ -3,9 +3,9 @@ import {GraphQLResolveInfo} from "graphql";
 import {selectSelection} from "./select";
 import {fillSelect, includeReturn} from "./build";
 
-export function infoToInclude(params: InfoIncludeParams, info: GraphQLResolveInfo): includeReturn {
+export function infoToInclude(params: InfoIncludeParams, info: GraphQLResolveInfo, name?: string): includeReturn {
     if (!info) return {}
-    const data = selectSelection(info, params);
+    const data = selectSelection(info, params, name);
     if (!data) return {}
     const ret = fillSelect(data, params);
     if (!('select' in ret) && !('include' in ret)) return {};
