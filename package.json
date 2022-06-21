@@ -1,5 +1,5 @@
 {
-  "name": "graphql-prisma-info-include-22",
+  "name": "graphql-prisma-info-include-2",
   "version": "1.1.1",
   "description": "From your query or mutation's info argument to prisma include or select",
   "prepublish": "tsc",
